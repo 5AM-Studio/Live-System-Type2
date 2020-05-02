@@ -13,7 +13,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 		<!-- <link rel="stylesheet" href="./node_modules/dplayer/dist/DPlayer.min.css"> -->
 		<script src='https://unpkg.com/valine/dist/Valine.min.js'></script>
-		<!-- <link rel="stylesheet" href="./assets/css/valine.css" /> -->
+		<link rel="stylesheet" href="./assets/css/valine.css" />
 		<noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -23,7 +23,7 @@
 				<h1>Live</h1>
 				<div id="dplayer" style="width:960px;height:540px;"></div>
 				<hr>
-				<div id="vcomments" style="width:960px;height:360px;background-color:white;"></div>
+				<div id="vcomments" style="width:960px;height:auto;background-color:white;"></div>
 				<script>
 					new Valine({
 						el: '#vcomments',
@@ -32,6 +32,7 @@
 						placeholder: '欢迎在这里评论！',
 						avatar: 'mp',
 						meta: ['nick','mail'],
+						pageSize: 20,
 						lang: 'zh-CN',
 						recordIP: true,
 						emojiCDN: 'https://valinecdn.bili33.top/',
