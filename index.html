@@ -17,13 +17,21 @@
 		<noscript><link rel="stylesheet" href="./assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
-
 		<!-- Wrapper -->
 			<div id="wrapper">
 				<h1>Live</h1>
-				<div id="dplayer" style="width:960px;height:540px;"></div>
+				<div id="dplayer" style="width:960px;height:540px;filter:alpha;"></div>
 				<hr>
-				<div id="vcomments" style="width:960px;height:auto;background-color:white;"></div>
+				<style type='text/css'>
+					.vcomments{
+						filter:alpha(opacity=50);
+						-moz-opacity:0.5;
+						opacity:0.5;
+						width: 960px;
+						height:auto;
+						color:white;
+					}</style>			
+				<div id="vcomments" style="width:960px;height:auto;background-color:white;filter:alpha(opacity=60);-moz-opacity:0.6;opacity:0.6;"></div>
 				<script>
 					new Valine({
 						el: '#vcomments',
